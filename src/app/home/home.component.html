@@ -3,7 +3,7 @@
 </div>
 <div class="main-container">
 
-  <mat-card class="card">
+  <mat-card class="card" (click) ="navigateTo('navigation')">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>Navigation</mat-card-title>
@@ -16,7 +16,7 @@
     </mat-card-content>
   </mat-card>
 
-  <mat-card class="card">
+  <mat-card class="card" (click) ="navigateTo('search')">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>Searching</mat-card-title>
@@ -29,7 +29,7 @@
     </mat-card-content>
   </mat-card>
 
-  <mat-card class="card">
+  <mat-card class="card" (click) ="navigateTo('api')">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>API</mat-card-title>
