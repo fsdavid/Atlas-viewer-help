@@ -1,0 +1,19 @@
+  
+<mat-toolbar class="toolbar">
+  <div [routerLink]='[""]' class="logo"><img class="image" src="../../assets/pictures/HBP_Primary_RGB_WhiteText.png">
+    <span>Help page of Interactive Atlas Viewer</span>
+  </div>
+
+  <span class="fill-between-right-and-left"></span>
+
+  <button [routerLink]='["navigation"]' (click)="clearSearchResults()" class ="menu-item" mat-button>
+    <span class="text">Navigation</span>
+  </button>
+  <button [routerLink]='["search"]' (click)="clearSearchResults()" class ="menu-item" mat-button>
+    <span class="text">Search</span>
+  </button>
+
+  <button [routerLink]='["api"]' (click)="clearSearchResults()" class ="menu-item" mat-button>
+    <span class="text">API</span>
+  </button>
+</mat-toolbar>
