@@ -1,8 +1,8 @@
 <div class="container">
   <div class="menu-container">
       <div class="vertical-menu">
-          <a (click)="scroll(HomeP)" class="active">Home</a>
-          <a (click)="scroll(UrlState)">URL State</a>
+          <a (click)="scroll(HomeP); this.selectedItem='Home'" [ngClass]="{'active': selectedItem=='Home'}" #HomeButton>Home</a>
+          <a (click)="scroll(UrlState); this.selectedItem='UrlState'" [ngClass]="{'active': selectedItem=='UrlState'}" #UrlButton>URL State</a>
         </div>
   </div>
 

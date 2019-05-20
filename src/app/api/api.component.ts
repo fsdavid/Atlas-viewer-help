@@ -7,13 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApiComponent implements OnInit {
 
+  selectedItem: string = 'Home';
+
   constructor() { }
 
   ngOnInit() {
   }
 
   scroll(el:HTMLElement) {
-    el.scrollIntoView();
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
 }
