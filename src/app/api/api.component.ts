@@ -12,4 +12,8 @@ export class ApiComponent implements OnInit {
   ngOnInit() {
   }
 
+  scroll(el:HTMLElement) {
+    el.scrollIntoView();
+  }
+
 }

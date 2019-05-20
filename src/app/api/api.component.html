@@ -1,3 +1,120 @@
-<p>
-  api works!
-</p>
+<div class="container">
+  <div class="menu-container">
+      <div class="vertical-menu">
+          <a (click)="scroll(HomeP)" class="active">Home</a>
+          <a (click)="scroll(UrlState)">URL State</a>
+        </div>
+  </div>
+
+
+  <div>
+  <div class="main-container" #HomeP>
+      <h1 style="text-align: center" id="interactive-atlas-viewer">Interactive Atlas Viewer</h1>
+      <p>Interactive Atlas Viewer is an frontend module wrapping around <a href="https://github.com/HumanBrainProject/nehuba">nehuba</a>. It provides additional features, such as metadata integration, data visualisation and a robust plugin system.</p>
+      <h2 id="getting-started">Getting Started</h2>
+      <p>A live version of the Interactive Atlas Viewer is available at <a href="https://kg.humanbrainproject.org/viewer/">https://kg.humanbrainproject.org/viewer/</a>. This section is useful for developers who would like to develop this project.</p>
+      <h3 id="general-information">General information</h3>
+      <p>Interactive atlas viewer is built with <a href="https://angular.io/">Angular (v6.0)</a>, <a href="http://getbootstrap.com/">Bootstrap (v4)</a>, and <a href="https://fontawesome.com/">fontawesome icons</a>. Some other notable packages used are: <a href="https://valor-software.com/ng2-charts/">ng2-charts</a> for charts visualisation, <a href="https://valor-software.com/ngx-bootstrap/">ngx-bootstrap</a> for UI and <a href="https://github.com/ngrx/platform">ngrx/store</a> for state management.</p>
+      <h3 id="prerequisites">Prerequisites</h3>
+      <ul>
+      <li>node &gt; 6</li>
+      <li>npm &gt; 4</li>
+      </ul>
+      <h3 id="develop-interactive-viewer">Develop Interactive Viewer</h3>
+      <p>To run a dev server, run:</p>
+      <pre><code>git clone https://github.com/HumanBrainProject/interactive-viewer
+      cd interactive-viewer
+      npm i
+      npm run dev-server</code></pre>
+      <h3 id="develop-plugins">Develop Plugins</h3>
+      <p>To develop plugins for the interactive viewer, run:</p>
+      <pre><code>git clone https://github.com/HumanBrainProject/interactive-viewer
+      cd interactive-viewer
+      npm i
+      npm run dev-plugin
+      
+      /* or define your own endpoint that returns string of manifests */
+      PLUGINDEV=http://mycustom.io/allPluginmanifest npm run dev-server
+      </code></pre>
+      <p>The contents inside the folder in <code>./src/plugin_examples</code> will be automatically fetched by the dev instance of the interactive-viewer on load.</p>
+      <p><a href="src/plugin_examples/README.md">plugin readme</a></p>
+      <p><a href="src/plugin_examples/plugin_api.md">plugin api</a></p>
+      <p><a href="src/plugin_examples/migrationGuide.md">plugin migration guide</a></p>
+      <h2 id="deployment">Deployment</h2>
+      <p><code>package.json</code> provide with two ways of building the interactive atlas viewer, <code>JIT</code> or <code>AOT</code> compilation. In general, <code>AOT</code> compilation produces a smaller package and has better performance.</p>
+      <h2 id="aot-compilation">AOT compilation</h2>
+      <p>Define <code>BUNDLEDPLUGINS</code> as a comma separated environment variables to bundle the plugins.</p>
+      <pre><code>[BUNDLEDPLUGINS=pluginDir1[,pluginDir2...]] npm run build-aot</code></pre>
+      <h2 id="jit-compilation">JIT Compilation</h2>
+      <pre><code>npm run build
+      
+      /* OR */
+      
+      npm run build-min</code></pre>
+      <h2 id="contributing">Contributing</h2>
+      <p>Feel free to raise an issue in this repo and/or file a PR.</p>
+      <h2 id="versioning">Versioning</h2>
+      <p>Commit history prior to v0.2.0 is available in the <a href="https://github.com/HumanBrainProject/interactive-viewer/tree/legacy-v0.2.0">legacy-v0.2.0</a> branch. The repo was rewritten to remove its dependency on neuroglancer and nehuba. This allowed for simpler webpack config, faster build time and AOT compilation.</p>
+      <h2 id="license">License</h2>
+      <p>MIT</p>
+      
+
+  </div>
+
+
+
+
+
+
+  <div class="main-container" #UrlState>
+    <h1 id="url-state" style="text-align: center;">URL State</h1>
+    <p>Interactive Atlas Viewer could be run with already selected state. It is possible to create or save application URL so, that it will contain specific data which will usefull to run application with already defined state. In URL, this specific data, is saved as URL query parameters.</p>
+    <h2 id="url-query-parameters-in-interactive-atlas-viewer">URL query parameters in Interactive Atlas Viewer</h2>
+    <p>URL query parameters are variables which are located after URL and separated from the URL with "?" mark. URL query parameter variable contains variable name and value. Url query parameters are divided by "&amp;" symbol. it is not possible to use whitespaces in the URL query. In Interactive Atlas Viewer, URL query parameters are used to save or create an application state. There are 6 main parameters which are used to save the application state. They are: navigation, niftiLayers, parcellationSelected, pluginState, regionsSelected and templateSelected.</p>
+    <p>Example of already filled URL looks like this:</p>
+    <pre><code>  
+    https://dev-next-interactive-viewer.apps-dev.hbp.eu/?templateSelected=MNI+152+ICBM+2009c+Nonlinear+Asymmetric&amp;parcellationSelected=Fibre+Bundle+Atlas+-+Long+Bundle&amp;navigation=0_0_0_1__0.11092895269393921_0.8756000399589539_-0.44895267486572266_-0.13950254023075104__2500000__1430285_13076858_4495181__204326.41684726204&amp;regionsSelected=31_51_32  
+      </code></pre>
+    <p>4 parameters are mentioned inside the example URL:</p>
+    <ul>
+    <li>templateSelected<br /></li>
+    <li>parcellationSelected<br /></li>
+    <li>navigation<br /></li>
+    <li>regionsSelected</li>
+    </ul>
+    <h3 id="template-selected---parameter">Template Selected - parameter</h3>
+    <p>Template Selected parameter, is used to or <strong>select the template</strong> with using URL. From the given example we can see the parameter:</p>
+    <pre><code>templateSelected=MNI+152+ICBM+2009c+Nonlinear+Asymmetric  </code></pre>
+    <p>In parameter value, whitespaces should be replaced with "+" symbol. So, actually, the selected template name is:</p>
+    <pre><code>MNI 152 ICBM 2009c Nonlinear Asymmetric  </code></pre>
+    <p>To select a template from URL it is not required to have any other parameter. "Parcellation Selected" and "Navigation" parameters will be automatically added by default values. So, before the application automatically adds parameters, the URL will look like this:</p>
+    <pre><code>https://dev-next-interactive-viewer.apps-dev.hbp.eu/?templateSelected=MNI+152+ICBM+2009c+Nonlinear+Asymmetric  </code></pre>
+    <h3 id="parcellation-selected---parameter">Parcellation Selected - parameter</h3>
+    <p>Given parameter is used to select parcellation on the template. As in template selection parameter value, whitespaces are changed with "+" symbol. To use Parcellation parameter, selection template should be in URL parameters too. Navigation parameter will be automatically added by default values. So, before the application automatically adds parameters, the URL will look like this:</p>
+    <pre><code>https://dev-next-interactive-viewer.apps-dev.hbp.eu/?templateSelected=MNI+152+ICBM+2009c+Nonlinear+Asymmetric&amp;parcellationSelected=Fibre+Bundle+Atlas+-+Long+Bundle  </code></pre>
+    <p>From this example selected parcellation name is</p>
+    <pre><code>Fibre Bundle Atlas - Long Bundle  </code></pre>
+    <h3 id="navigation---parameter">Navigation - parameter</h3>
+    <p>Navigation parameter is to determine orientation, position and zoom of 2d and 3d parts of the selected template. It does not depend on selected parcellation, but it depends on the selected template.<br />Navigation parameter itself includes 5 fields - orientation, perspectiveOrientation, perspectiveZoom, position and zoom. They are sorted appropriate and divided by "__" symbol.<br />This is the navigation parameters part from the example</p>
+    <pre><code>navigation=0_0_0_1__0.11092895269393921_0.8756000399589539_-0.44895267486572266_-0.13950254023075104__2500000__1430285_13076858_4495181__204326.41684726204  </code></pre>
+    <p><strong>orientation</strong> - the field is used to determine an orientation of the 2D part in atlas viewer. The field contains with 4 numbers, divided by " " symbol. 3 of these numbers should have value "0" and one should have value "1". Value 1 will determine the orientation of the 2D image. In the example orientation is a first element - "0 0_0_1".<br /><strong>perspectiveOrientation</strong> - the field is used to determine an orientation of the 3D part in atlas viewer. The field contains with 4 numbers, divided by "_" symbol. In the example perspective orientation is the second element</p>
+    <pre><code>0.11092895269393921_0.8756000399589539_-0.44895267486572266_-0.13950254023075104"  </code></pre>
+    <p><strong>perspectiveZoom</strong> - the field is used to determine zoom in 3D pard in atlas viewer. It is the single number and is the third element - "2500000"<br /><strong>position</strong> - the field is used to determine the position of the dot where the camera is oriented in both 2D and 3D parts of atlas viewer. Field contains with 3 numbers, divided by " " symbol - "1430285 13076858_4495181".<br /><strong>zoom</strong> - the field is used to determine zoom in 2D pard in atlas viewer. It is the single number and is the last element - "204326.41684726204"</p>
+    <h3 id="regions-selected---parameter">Regions Selected - parameter</h3>
+    <p>Every region of selected parcellation has its own integer number as id. To select the region from URL, with templateSelected and parcellationSelected parameters, URL should contain the regionSelected parameter. In this parameter. In the given example, we can see the region parameter part.</p>
+    <pre><code>regionsSelected=31_51_32  </code></pre>
+    <p>in parameter, different regions are divided with "_" symbol. It meant that in the given example, there are 3 selected parameters - 31, 51 and 32.<br />The region belongs to parcellation, so user can not add regionsSelected without templateSelected and parcellationSelected parameters. Navigation parameter will be automatically added by default values.</p>
+    <h3 id="nifti-layers---parameter">Nifti Layers - parameter</h3>
+    <p>Nifti Layers parameter adds to the application URL, when the user selects the nifti layer of selected regions. The value of this parameter is text. Especially, it is a link where the nifti file is located.<br />Example</p>
+    <pre><code>https://dev-next-interactive-viewer.apps-dev.hbp.eu/?niftiLayers=https%3A%2F%2Fneuroglancer.humanbrainproject.org%2Fprecomputed%2FJuBrain%2Fv2.2c%2FPMaps%2FIPL_PF.nii&amp;templateSelected=MNI+Colin+27&amp;parcellationSelected=JuBrain+Cytoarchitectonic+Atlas  </code></pre>
+    <p>You see, that value of parameter "niftiLayers" is</p>
+    <pre><code>https%3A%2F%2Fneuroglancer.humanbrainproject.org%2Fprecomputed%2FJuBrain%2Fv2.2c%2FPMaps%2FIPL_PF.nii  </code></pre>
+    <p>This is the encoded text for URL where %3A is for ":" and %2F is for "/". So, nifti file's URL is</p>
+    <pre><code>https://Fneuroglancer.humanbrainproject.org/Fprecomputed/JuBrain/v2.2c/PMaps/IPL_PF.nii  </code></pre>
+    <h2 id="contributing">Contributing</h2>
+    <p>Feel free to raise an issue in this repo and/or file a PR.</p>
+  </div>
+
+</div>
+
+</div>
