@@ -20,7 +20,6 @@
     width: 200px;
     display: flex;
     flex-direction: column;
-    // align-items: center;
     outline: none;
     margin: -50px 10px 60px 10px;
     cursor: pointer;
@@ -30,4 +29,9 @@
     width: 100px;
     height: auto;
     align-self: center;
+}
+
+mat-card-header {
+    display: flex; 
+    justify-content: center;
 }
