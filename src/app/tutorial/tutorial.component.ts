@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IsMobileService } from '../resources/services/is-Movile.service';
 
 @Component({
   selector: 'app-tutorial',
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class TutorialComponent implements OnInit {
 
   runGif: string;
-  constructor() { }
+  isMobile: boolean;
+  constructor(private isMobileService: IsMobileService) { }
 
   ngOnInit() {
+    if (this.isMobileService.isMobile()) {
+      this.isMobile = true;
+    }
   }
 
 }

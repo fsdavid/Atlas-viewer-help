@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular/core';
+import { IsMobileService } from '../resources/services/is-Movile.service';
 
 @Component({
   selector: 'app-api',
@@ -11,9 +12,12 @@ export class ApiComponent implements OnInit {
   @ViewChild('HomeP') homeP: ElementRef
   @ViewChild('UrlState') urlState: ElementRef
 
-  constructor() { }
+  constructor(private isMobileService: IsMobileService) { }
 
   ngOnInit() {
+    if (this.isMobileService.isMobile()) {
+      this.isMobile = true;
+    }
   }
 
   scroll(el:HTMLElement) {

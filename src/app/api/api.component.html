@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="menu-container">
+  <div class="menu-container" *ngIf="!isMobile">
       <div class="vertical-menu">
           <a (click)="scroll(HomeP);" [ngClass]="{'active': selectedItem=='Home'}" #HomeButton>Home</a>
           <a (click)="scroll(UrlState);" [ngClass]="{'active': selectedItem=='UrlState'}" #UrlButton>URL State</a>
