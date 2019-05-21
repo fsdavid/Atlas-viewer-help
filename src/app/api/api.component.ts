@@ -9,6 +9,7 @@ import { IsMobileService } from '../resources/services/is-Movile.service';
 export class ApiComponent implements OnInit {
 
   selectedItem: string = 'Home'
+  isMobile: boolean;
   @ViewChild('HomeP') homeP: ElementRef
   @ViewChild('UrlState') urlState: ElementRef
 
