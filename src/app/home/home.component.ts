@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { faSolarPanel } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-home',
@@ -6,6 +8,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
+  faSolarPanel = faSolarPanel;
 
   constructor() { }
 
@@ -16,7 +20,7 @@ export class HomeComponent implements OnInit {
 
   navigateTo(page) {
     this.page.emit(page);
-    if (page){
+    if (page) {
       var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?help='+page;
       window.history.pushState({path:newurl},'',newurl);
     }

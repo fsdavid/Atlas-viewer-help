@@ -8,7 +8,7 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class AppComponent {
 
-  pages: string[] = ['navigation', 'search', 'api']
+  pages: string[] = ['interface', 'tutorial', 'api']
   activePage: string = ''
 
   constructor(private route: ActivatedRoute) {

@@ -1,6 +1,6 @@
 <app-nav-menu (page)="pageChanged($event)"></app-nav-menu>
 
 <app-home (page)="pageChanged($event)" *ngIf="!activePage"></app-home>
-<app-navigation *ngIf="activePage === 'navigation'"></app-navigation>
-<app-search *ngIf="activePage === 'search'"></app-search>
+<app-interface *ngIf="activePage === 'interface'"></app-interface>
+<app-tutorial *ngIf="activePage === 'tutorial'"></app-tutorial>
 <app-api *ngIf="activePage === 'api'"></app-api>

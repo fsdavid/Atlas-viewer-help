@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { IsMobileService } from '../resources/services/is-Movile.service';
 
 @Component({
   selector: 'app-nav-menu',
@@ -7,11 +8,16 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class NavMenuComponent implements OnInit {
 
-  constructor() { }
+  isMobile: boolean;
+
+  constructor(private isMobileService: IsMobileService) { }
 
   @Output() page = new EventEmitter<string>();
 
   ngOnInit() {
+    if (this.isMobileService.isMobile()) {
+      this.isMobile = true;
+    }
   }
 
   navigateTo(page) {
@@ -22,6 +28,9 @@ export class NavMenuComponent implements OnInit {
     }
   }
 
-  
+  widthLess() {
+    return window.innerWidth >= 750
+  }
+
 
 }

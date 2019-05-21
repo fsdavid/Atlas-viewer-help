@@ -28,28 +28,30 @@ html {
 .menu-container {
     margin: 50px 20px 0 0;
     position: fixed;
-    
+
     .vertical-menu {
         width: 200px;
-    }
-      
-      .vertical-menu a {
+
+
+      a {
         background-color: #eee;
         color: black;
         display: block;
         padding: 12px;
         text-decoration: none;
+        cursor: pointer;
       }
-      
-      .vertical-menu a:hover {
-        background-color: #ccc;
-      }
-      
-      .vertical-menu a.active {
-        background-color: #ef5450;
-        color: white;
-      }
-    
+        a:hover {
+          background-color: #ccc;
+        }
+
+        a.active {
+          background-color: #ef5450;
+          color: white;
+        }
+
+    }
+
 }
 
 pre {

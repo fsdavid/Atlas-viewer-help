@@ -1,8 +1,8 @@
 <div class="container">
   <div class="menu-container">
       <div class="vertical-menu">
-          <a (click)="scroll(HomeP); this.selectedItem='Home'" [ngClass]="{'active': selectedItem=='Home'}" #HomeButton>Home</a>
-          <a (click)="scroll(UrlState); this.selectedItem='UrlState'" [ngClass]="{'active': selectedItem=='UrlState'}" #UrlButton>URL State</a>
+          <a (click)="scroll(HomeP);" [ngClass]="{'active': selectedItem=='Home'}" #HomeButton>Home</a>
+          <a (click)="scroll(UrlState);" [ngClass]="{'active': selectedItem=='UrlState'}" #UrlButton>URL State</a>
         </div>
   </div>
 
@@ -32,7 +32,7 @@
       cd interactive-viewer
       npm i
       npm run dev-plugin
-      
+
       /* or define your own endpoint that returns string of manifests */
       PLUGINDEV=http://mycustom.io/allPluginmanifest npm run dev-server
       </code></pre>
@@ -47,9 +47,9 @@
       <pre><code>[BUNDLEDPLUGINS=pluginDir1[,pluginDir2...]] npm run build-aot</code></pre>
       <h2 id="jit-compilation">JIT Compilation</h2>
       <pre><code>npm run build
-      
+
       /* OR */
-      
+
       npm run build-min</code></pre>
       <h2 id="contributing">Contributing</h2>
       <p>Feel free to raise an issue in this repo and/or file a PR.</p>
@@ -57,7 +57,7 @@
       <p>Commit history prior to v0.2.0 is available in the <a href="https://github.com/HumanBrainProject/interactive-viewer/tree/legacy-v0.2.0">legacy-v0.2.0</a> branch. The repo was rewritten to remove its dependency on neuroglancer and nehuba. This allowed for simpler webpack config, faster build time and AOT compilation.</p>
       <h2 id="license">License</h2>
       <p>MIT</p>
-      
+
 
   </div>
 
@@ -72,8 +72,8 @@
     <h2 id="url-query-parameters-in-interactive-atlas-viewer">URL query parameters in Interactive Atlas Viewer</h2>
     <p>URL query parameters are variables which are located after URL and separated from the URL with "?" mark. URL query parameter variable contains variable name and value. Url query parameters are divided by "&amp;" symbol. it is not possible to use whitespaces in the URL query. In Interactive Atlas Viewer, URL query parameters are used to save or create an application state. There are 6 main parameters which are used to save the application state. They are: navigation, niftiLayers, parcellationSelected, pluginState, regionsSelected and templateSelected.</p>
     <p>Example of already filled URL looks like this:</p>
-    <pre><code>  
-    https://dev-next-interactive-viewer.apps-dev.hbp.eu/?templateSelected=MNI+152+ICBM+2009c+Nonlinear+Asymmetric&amp;parcellationSelected=Fibre+Bundle+Atlas+-+Long+Bundle&amp;navigation=0_0_0_1__0.11092895269393921_0.8756000399589539_-0.44895267486572266_-0.13950254023075104__2500000__1430285_13076858_4495181__204326.41684726204&amp;regionsSelected=31_51_32  
+    <pre><code>
+    https://dev-next-interactive-viewer.apps-dev.hbp.eu/?templateSelected=MNI+152+ICBM+2009c+Nonlinear+Asymmetric&amp;parcellationSelected=Fibre+Bundle+Atlas+-+Long+Bundle&amp;navigation=0_0_0_1__0.11092895269393921_0.8756000399589539_-0.44895267486572266_-0.13950254023075104__2500000__1430285_13076858_4495181__204326.41684726204&amp;regionsSelected=31_51_32
       </code></pre>
     <p>4 parameters are mentioned inside the example URL:</p>
     <ul>

@@ -1,16 +1,16 @@
-  
+
 <mat-toolbar class="toolbar">
   <div class="logo"><img class="image" src="../../assets/pictures/HBP_Primary_RGB_WhiteText.png" (click) ="navigateTo('')">
-    <span  (click) ="navigateTo('')">Help page of Interactive Atlas Viewer</span>
+    <span  (click) ="navigateTo('')" *ngIf="!isMobile">Help page of Interactive Atlas Viewer</span>
   </div>
 
   <span class="fill-between-right-and-left"></span>
 
-  <button class ="menu-item" mat-button (click) ="navigateTo('navigation')">
-    <span class="text">Navigation</span>
+  <button class ="menu-item" mat-button (click) ="navigateTo('interface')">
+    <span class="text">User Interface</span>
   </button>
-  <button class ="menu-item" (click) ="navigateTo('search')" mat-button>
-    <span class="text">Search</span>
+  <button class ="menu-item" (click) ="navigateTo('tutorial')" mat-button>
+    <span class="text">Quick Tutotials</span>
   </button>
 
   <button class ="menu-item" (click) ="navigateTo('api')" mat-button>

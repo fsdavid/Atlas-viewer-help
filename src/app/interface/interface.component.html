@@ -1,0 +1,109 @@
+
+<div class="main-container">
+  <H1 >User interface</H1>
+  <div class="description-text">
+    <p>At the first page of an application, you see the list of templates. Each item of the list contains name and description</p>
+    <img class="container-image" src="../../assets/pictures/BP_Start.JPG">
+    <div class="flex">
+      <p>As you can see, below the description text is the arrow button. Usually, description text is
+         collapsed into the main screen and if you want to open full Description, open it using the arrow button.
+         To choose one of the templates, just click the relevant one from the list.
+      </p>
+      <!-- <img class="desc-image" src="../../assets/pictures/BP_start_desc.JPG"> -->
+    </div>
+    <p>After you choose the template, brain images will appear on the screen</p>
+
+
+  </div>
+
+  <img class="full-image" src="../../assets/pictures/BP12.png" >
+
+  <div class="description-text">
+    <p>As you can see, the simple page of the brain atlas viewer consists of 9 basic parts. The parts are
+       marked with white squares. Also, some of the parts can be divided too. We will talk about them. Now let's describe the parts</p>
+
+    <div class="list-item">
+      <p> <strong>1,2,3</strong> - 2D images of the brain.</p>
+      <p> <strong>4</strong> - The 3D image of the brain.</p>
+      <p> <strong>5</strong> - This part consists with logo and icons for open floating widgets as searches, layers and plugins. (<span class = "link" (click)="goToRegion(Five)">click for details</span>)</p>
+      <p> <strong>6</strong> - The part contains information about the position of cursor and camera. From camera, it is available to reset position, rotation, and zoom for both 2D and 3D images. (<span class = "link" (click)="goToRegion(Six)">click for details</span>)</p>
+      <p> <strong>7</strong> - This part contains information about zoom in 2D images.</p>
+      <p> <strong>8</strong> - From the part it is available to select template and parcellations. Also, it's available to search and select or deselect regions of parcellation. With what panel contains help and login buttons. (<span class = "link" (click)="goToRegion(Eight)">click for details</span>)</p>
+      <p> <strong>9</strong> - With the clicking of the button, in the 3D image user can hide and show frontal octant of the brain.</p>
+    </div>
+  </div>
+
+  <div class="description-text">
+    <p>Let's deep dive into the regions 5, 6 and 8. These parts are complex.
+      The items of each part could perform the different functions, but mostly they are united in one category.</p>
+  </div>
+
+  <div class="description-text" #Five>
+      <p><strong>5</strong></p>
+  </div>
+
+  <div class="description-text">
+      <p>As we mentioned, the part consists of a logo and icons Located under it. Icons are for opened or collapsed floating
+        widgets as layer browser, plugins, and searches. Let's see the image of these icons</p>
+  </div>
+
+  <div class="description-text">
+      <img class="container-image" style="max-width: 400px;" src='../../assets/pictures/five.png'>
+  </div>
+
+
+  <div class="description-text">
+      <p>As you can see, there is 3 type of icons. 1. The icon for layer browser.
+        2. Icons for plugins. 3. Icons for searches. Let's pretend the floating widgets itself
+      </p>
+
+      <table class="image-table">
+        <tr><td>Layer Browser</td><td>Plugin</td><td>Search</td></tr>
+        <tr>
+          <td>
+            <img src="../../assets/pictures/layer.JPG">
+          </td>
+          <td>
+            <img src="../../assets/pictures/widget.JPG">
+          </td>
+          <td>
+            <img src="../../assets/pictures/search.JPG">
+          </td>
+        </tr>
+      </table>
+
+  </div>
+
+
+
+  <div class="description-text" #Six>
+      <p><strong>6</strong></p>
+  </div>
+
+  <div class="description-text" >
+      <p>In the first example, the part under the number 6 is not visible well. So Let's look at it better.</p>
+  </div>
+  <div class="description-text" >
+      <img class="container-image" style="max-width: 400px;" src='../../assets/pictures/navigation_tracker.gif'>
+  </div>
+  <div class="description-text list-item" >
+      <p>As you can see, we have 4 constant and 1 temporary line</p>
+      <p>1 - reset: from the line you can reset position rotation and zoom of coordinates.</p>
+      <p>2 - space: from line, you can change the measure from physical to voxel.</p>
+      <p>3 - navigation: from here as you can see the coordinates of the image, you can change them.</p>
+      <p>4 - navigation: you can see the coordinates of the mouse.</p>
+      <p>5 - this temporary line is shown when the cursor is hovering some region of parcellation. Accordingly, the line content is the name of the region.</p>
+  </div>
+
+
+  <div class="description-text" #Eight>
+      <p><strong>8</strong></p>
+  </div>
+  <div class="description-text" >
+      <p>Let's look at part 8 better</p>
+      <img class="container-image" src='../../assets/pictures/templates.gif'>
+      <p>As you can see you can select templates and parcellation with drop-down lists. Also, you can search and select the specific regions of parcellation.</p>
+  </div>
+
+
+</div>

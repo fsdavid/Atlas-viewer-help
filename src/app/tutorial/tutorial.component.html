@@ -1,0 +1,302 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>
+      Selection
+      <small class="text-muted">
+        Select templates, parsellations and regions
+      </small>
+    </h1>
+  </div>
+</div>
+<div class="container">
+
+
+    <div class="row">
+        <p style="font-style: italic">
+          Please click on image to run an animation
+        </p>
+      </div>
+      <hr>
+
+  <!-- Select Template -->
+  <div class="row">
+    <div class="d-flex">
+      <!-- text -->
+      <div class="text-container">
+
+
+
+        <h2>Select template</h2>
+        <p>
+          At the first page of an application, you see the list of templates. To select one of them click to it. (See picture 1)
+        </p>
+        <p>
+          Also, You can select or change template from top menu. Open the template selection list and select the desirable templete (See picture 2)
+        </p>
+      </div>
+      <div class="image-container">
+        <img [src]="runGif === 's_t_1'? '../../assets/pictures/select_template_1.gif' : '../../assets/pictures/select_template_1.jpg'"
+              alt="Selectiong template Big Brain Histology."
+              (click)="runGif = 's_t_1'">
+      </div>
+
+      <div class="image-container ml-1">
+        <img [src]="runGif === 's_t_2'? '../../assets/pictures/select_template_2.gif' : '../../assets/pictures/select_template_2.jpg'"
+              alt="Changing template to MNI Colin 27"
+              (click)="runGif = 's_t_2'">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Select Parsellation -->
+  <div class="row">
+    <div class="d-flex">
+
+      <!-- text -->
+      <div class="text-container">
+        <h2>Select Parsellation</h2>
+        <p>
+          You can select parsellation from top menu. Open the parsellation selection list and select the desirable parsellation
+        </p>
+      </div>
+
+    <div class="image-container">
+      <img [src]="runGif === 'pa'? '../../assets/pictures/parsellation.gif' : '../../assets/pictures/parsellation.jpg'"
+            alt="Changing parselation to Fibre Bundle Atlass"
+            (click)="runGif = 'pa'">
+    </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+      <div class="d-flex">
+
+        <!-- text -->
+        <div class="text-container">
+          <h2>Select Regions</h2>
+          <p>
+            You can select regions with 2 way.Open the parsellation selection list and select the desirable parsellation
+          </p>
+          <p>
+            You can select regions from top menu. Search desirable regions and click on it. (See picture 1)
+          </p>
+          <p>
+              You can select a region by double-clicking to it on the template image. (See picture 2)
+          </p>
+        </div>
+
+        <div class="image-container">
+            <img [src]="runGif === 's_r_1'? '../../assets/pictures/select_region_1.gif' : '../../assets/pictures/select_region_1.png'"
+                  alt="Selecting regions from top menu."
+                  (click)="runGif = 's_r_1'">
+          </div>
+
+          <div class="image-container ml-1">
+            <img [src]="runGif === 's_r_2'? '../../assets/pictures/select_region_2.gif' : '../../assets/pictures/select_region_2.png'"
+                  alt="Selecting regions by double click"
+                  (click)="runGif = 's_r_2'">
+        </div>
+
+      </div>
+    </div>
+
+
+</div>
+
+
+<hr>  <hr>  <hr>
+
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>
+      Search
+      <small class="text-muted">
+        the <a href = "https://kg.humanbrainproject.org/">knowledge graph (KG)</a> for datasets.
+      </small>
+    </h1>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <p>
+      The interactive viewer is natively setup to query KG for any datasets related to specific parcellation area(s).
+      <!-- TODO add coming soon spatial search -->
+    </p>
+  </div>
+
+  <hr>
+
+  <!-- single area search -->
+  <div class="row">
+    <div class="d-flex">
+      <!-- text -->
+      <div class="text-container">
+        <h2>Single area search</h2>
+        <p>
+          To conduct a single area search, right click on any parcellation area. In the context menu, select
+          <mark>Search KG for ...</mark>
+          and a data browser window will be launched, fetching the dataset associated with this area.
+        </p>
+      </div>
+      <!-- screenshot 1 -->
+      <div class="image-container">
+        <img src="../../assets/searchKg/rightclick.png" alt="Screenshot of right clicking the parcellation region of Area hOc1 of JuBrain in MNI Colin 27.">
+      </div>
+
+      <div class="image-container ml-1">
+        <img src="../../assets/searchKg/databrowser.png" alt="Screenshot of the databrowser, showing datasets fetched for Area hOc1 of JuBrain in MNI Colin 27">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- multi area search -->
+  <div class="row">
+    <div class="d-flex">
+
+      <!-- text -->
+      <div class="text-container">
+        <h2>Multi area search</h2>
+        <p>
+          To conduct a multi area search, double click as many areas as the search scope is desired. When the region selection is completed, right click the viewer and select
+          <mark>Search KG for ... selected regions</mark>,
+          similar to single area search, a data browser will be launched, fetching the dataset associated with all of the areas selected.
+        </p>
+      </div>
+
+      <!-- screenshot 1 -->
+    <div class="image-container">
+      <img src="../../assets/searchKg/multiregionSelect.png" alt="TODO alt text">
+    </div>
+    <!-- screenshot 2 -->
+    <div class="image-container ml-1">
+      <img src="../../assets/searchKg/multiregionQuery.png" alt="TODO alt text">
+    </div>
+
+    </div>
+  </div>
+</div>
+
+<hr>  <hr>  <hr>
+<div class="jumbotron">
+    <div class="container">
+      <h1>
+        Navigation
+      </h1>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <p style="font-style: italic">
+      Please click on image to run an animation
+    </p>
+  </div>
+  <hr>
+
+
+  <div class="row">
+      <div class="d-flex">
+        <!-- text -->
+        <div class="text-container">
+
+
+
+          <h2>Change coordinates</h2>
+          <p>
+            It is two way to change coordinates.
+          </p>
+          <p>
+            1. Drag image to disared position.
+          </p>
+          <p>
+            2. Fill coordinates in navigation field (input field located in left bottom side).
+          </p>
+        </div>
+        <div class="image-container">
+          <img [src]="runGif === 'm_f_1'? '../../assets/pictures/move_full.gif' : '../../assets/pictures/move_full.jpg'"
+                alt="Selectiong template Big Brain Histology."
+                (click)="runGif = 'm_f_1'">
+        </div>
+
+        <div class="image-container ml-1">
+          <img [src]="runGif === 'm_f_2'? '../../assets/pictures/move_full_2.gif' : '../../assets/pictures/move_full_2.png'"
+                alt="Changing template to MNI Colin 27"
+                (click)="runGif = 'm_f_2'">
+        </div>
+      </div>
+    </div>
+
+    <hr>
+  <div class="row">
+      <div class="d-flex">
+        <!-- text -->
+        <div class="text-container">
+          <h2>Change zoom</h2>
+          <p>
+              To increase or decreas zoom of the 2D image, user can scroll the mouse weel.
+              In this case, If cursor will hover some 2D image, scroll will change size of all 2D images, but will not change 3D image zoom.
+              To change 3D image zoom, cursor should hove the panel, thare 3D image are located.
+          </p>
+        </div>
+        <div class="image-container ml-1">
+            <img [src]="runGif === 'zo'? '../../assets/pictures/zoom.gif' : '../../assets/pictures/zoom.png'"
+                  alt="Changing template to MNI Colin 27"
+                  (click)="runGif = 'zo'">
+        </div>
+      </div>
+    </div>
+
+    <hr>
+  <div class="row">
+      <div class="d-flex">
+        <!-- text -->
+        <div class="text-container">
+          <h2>Rotation</h2>
+          <p>
+              Press shift + drag image - To change the rotation.
+          </p>
+        </div>
+        <div class="image-container ml-1">
+            <img [src]="runGif === 'ro'? '../../assets/pictures/rotate.gif' : '../../assets/pictures/rotate.png'"
+                  alt="Changing template to MNI Colin 27"
+                  (click)="runGif = 'ro'">
+        </div>
+      </div>
+    </div>
+
+    <hr> <hr> <hr>
+
+<!--
+  <p class="description-text">
+    <strong>Hold mouse left button + Mouse move</strong> - If user clicks to mouse left button and moves cursor,
+    center of picture will change according to the moving cursor. (See the gif).
+    <br>
+    <img class="container-image" src="../../assets/pictures/move_full.gif">
+    <br>
+    <span>With that, You can see that camera area is moving into the different 2 - 2D
+       images of nehuba container and camera areal is changing for 3D image. Also, If you look at #6 panel,
+       you can see thaw while moving the image, navigation parameters are changing. </span>
+    <span class="description-text">
+      <span><strong>The mouse weel</strong> - To increase or decreas zoom of the 2D image, user can scroll the mouse weel.
+        In this case, If cursor will hover some 2D image, scroll will change size of all 2D images, but will not change 3D image zoom.
+        To change 3D image zoom, cursor should hove the panel, thare 3D image are located.</span>
+    </span>
+    <br>
+    <span class="description-text">
+      <span><strong>Shift + Hold mouse left button + Mouse move</strong> - To change the rotation in 2D image, user can press shift and mouse left buttons and move cursor.
+        Cursor should be on 2D image in which you want to change orientation. While rotation you will see that image will change for another 2D images too, also camera areal will change for 3D image.
+        To change 3D image zoom, cursor should hove the panel, thare 3D image are located.</span>
+    </span>
+    <br>
+    <span class="description-text">
+      <span><strong>Ctrl + Scroll mouse weel</strong> - move camera</span>
+    </span>
+  </p> -->
+</div>
