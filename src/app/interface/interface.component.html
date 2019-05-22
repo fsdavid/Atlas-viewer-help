@@ -2,12 +2,10 @@
 <div class="main-container">
   <H1 >User interface</H1>
   <div class="description-text">
-    <p>At the first page of an application, you see the list of templates. Each item of the list contains name and description</p>
+    <p>At the first page of an application, you can see the list of templates. Each item of the list contains name and description</p>
     <img class="container-image" src="../../assets/pictures/BP_Start.JPG">
     <div class="flex">
-      <p>As you can see, below the description text is the arrow button. Usually, description text is
-         collapsed into the main screen and if you want to open full Description, open it using the arrow button.
-         To choose one of the templates, just click the relevant one from the list.
+      <p>Notice the arrow button. Usually description text is collapsed into the main screen. If you want to open full description, open it using the arrow button. To choose one of the templates, just click the relevant one from the list.
       </p>
       <!-- <img class="desc-image" src="../../assets/pictures/BP_start_desc.JPG"> -->
     </div>
@@ -19,23 +17,21 @@
   <img class="full-image" src="../../assets/pictures/BP12.png" >
 
   <div class="description-text">
-    <p>The simple page of the brain atlas viewer consists of 9 basic parts. The parts are
-       marked with white squares. Also, some of the parts can be divided too. We will talk about them. Now let's describe the parts</p>
+    <p>The simple page of the brain atlas viewer consists of 9 basic parts. The parts are marked with white squares. Now let's describe the parts</p>
 
     <div class="list-item">
-      <p> <strong>1,2,3</strong> - 2D images of the brain.</p>
-      <p> <strong>4</strong> - The 3D image of the brain.</p>
-      <p> <strong>5</strong> - This part consists of logo and icons for opening floating widgets such as searches, layers and plugins. (<span class = "link" (click)="goToRegion(Five)">click for details</span>)</p>
-      <p> <strong>6</strong> - The part inside the square, contains information about the coordinates and position of cursor. From camera, it is available to reset position, rotation, and zoom for both 2D and 3D images. (<span class = "link" (click)="goToRegion(Six)">click for details</span>)</p>
+      <p> <strong>1,2,3</strong> - Orthogonal 2D cross sections of the brain volume.</p>
+      <p> <strong>4</strong> - The 3D overview of the brain volume.</p>
+      <p> <strong>5</strong> - Logo and icons to open floating widgets such as search, layers and plugins. <span class = "link" (click)="goToRegion(Five)">click for details</span></p>
+      <p> <strong>6</strong> - Inside the square, you can see information about the coordinates and position of cursor. From here, it is available to reset position, rotation, and zoom for both 2D cross sections and 3D overview of brain volume. <span class = "link" (click)="goToRegion(Six)">click for details</span></p>
       <p> <strong>7</strong> - Scale bar indicating current level of zoom.</p>
-      <p> <strong>8</strong> - From this part it is possible to select template and parcellations. Also, it's available to search and select or deselect regions of parcellation. With that, panel contains help and login buttons. (<span class = "link" (click)="goToRegion(Eight)">click for details</span>)</p>
-      <p> <strong>9</strong> - With the clicking of the button, in the 3D image user can hide and show frontal octant of the brain.</p>
+      <p> <strong>8</strong> - From this part, it is possible to select templates and parcellations. Also, it is available to search, select or deselect regions of parcellation. With that, panel contains help and login buttons. <span class = "link" (click)="goToRegion(Eight)">click for details</span></p>
+      <p> <strong>9</strong> - With the clicking on the text, you can hide and show frontal octant in the 3D overview of the brain volume.</p>
     </div>
   </div>
 
   <div class="description-text">
-    <p>Let's deep dive into the regions 5, 6 and 8. These parts are complex.
-      The items of each part could perform different functions, but mostly they are united in one category.</p>
+    <p>Let's deep dive into the regions 5, 6 and 8. These parts are complex. The items of each part could perform different functions, but mostly they are united in one category.</p>
   </div>
 
   <div class="description-text" #Five>
@@ -43,8 +39,7 @@
   </div>
 
   <div class="description-text">
-      <p>As we mentioned, the part consists of a logo and icons Located under it. Icons are for opened or collapsed floating
-        widgets as layer browser, plugins, and searches. Let's see the image of these icons</p>
+      <p>As we mentioned, this part consists of a logo and icons. Icons are for opened or collapsed floating widgets such as layer browser, plugins, and searches. Let's see the image of these icons</p>
   </div>
 
   <div class="description-text">
@@ -53,9 +48,8 @@
 
 
   <div class="description-text">
-      <p>There is 3 type of icons. 1. The icon for layer browser.
-        2. Icons for plugins. 3. Icons for searches. Let's pretend the floating widgets itself
-      </p>
+      <p>There is 3 type of icons. 1. The icon for layer browser. 2. Icons for plugins.
+          3. Icons for searches. Let's pretend the floating widgets itself</p>
 
       <table class="image-table">
         <tr><td>Layer Browser</td><td>Plugin</td><td>Search</td></tr>
@@ -88,11 +82,11 @@
   </div>
   <div class="description-text list-item" >
       <p>As you can see, we have 4 constant and 1 temporary line</p>
-      <p>1 - reset: from the line you can reset position rotation and zoom of coordinates.</p>
-      <p>2 - space: from line, you can change the measure from physical to voxel.</p>
-      <p>3 - navigation: from here you can watch and change the coordinates of the image.</p>
-      <p>4 - navigation: you can see the coordinates of the mouse.</p>
-      <p>5 - this temporary line is shown when the cursor is hovering some region of parcellation. Accordingly, the line content is the name of the region.</p>
+      <p>1 - Reset: from the line you can reset position rotation and zoom of coordinates.</p>
+      <p>2 - Space: from line, you can change the measure from physical to voxel.</p>
+      <p>3 - Navigation: from here you can see and change the coordinates of orthogonal 2D cross sections of the brain volume.</p>
+      <p>4 - Mouse: you can see the coordinates of the mouse.</p>
+      <p>5 - The last temporary line is visible when the cursor is hovering some region of parcellation. Accordingly, the line content is region name.</p>
   </div>
 
 
@@ -102,7 +96,7 @@
   <div class="description-text" >
       <p>Let's look at part 8 better</p>
       <img class="container-image" src='../../assets/pictures/templates.gif'>
-      <p>As you can see you can select templates and parcellation with drop-down lists. Also, you can search and select the specific regions of parcellation.</p>
+      <p>You can select templates and parcellation with drop-down lists. Also, you can search and select the specific regions of parcellation.</p>
   </div>
 
 

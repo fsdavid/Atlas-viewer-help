@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
@@ -23,6 +23,13 @@ export class AppComponent {
         }
       }
     });
+  }
+
+  @HostListener('window:popstate', ['$event'])
+  onPopState(event) {
+    if (!window.location.pathname || window.location.pathname === '/') {
+      this.activePage = ''
+    }
   }
 
   pageChanged(event) {
