@@ -26,12 +26,12 @@
 
 
 
-        <h2>Select template</h2>
+        <h2>Selecting template</h2>
         <p>
-            At the first page of an application, you see the list of templates. Click to select one of them. (See picture 1)
+          On the first page of interactive atlas, you can see the list of templates. Click to select one of them.
         </p>
         <p>
-            Also, You can select or change template from top menu. Open the template selection list and select the desirable template. (See picture 2)
+          Also, you can select or change template from top menu. Open the template selection list and select desired template.
         </p>
       </div>
       <div class="image-container">
@@ -56,9 +56,9 @@
 
       <!-- text -->
       <div class="text-container">
-        <h2>Select Parsellation</h2>
+        <h2>Selecting Parsellation</h2>
         <p>
-            You can select parsellation from top menu. Open the parcellation selection list and select the desirable parcellation.
+          You can select parsellation from top menu. Open the parcellation selection list and select desired parcellation.
         </p>
       </div>
 
@@ -77,15 +77,15 @@
 
         <!-- text -->
         <div class="text-container">
-          <h2>Select Regions</h2>
+          <h2>Selecting regions</h2>
           <p>
-              You can select regions with 2 way. Open the parsellation selection list and select the desirable parcellation.
+            Open the parsellation selection list and select the desired parcellation. You can select regions with two ways
           </p>
           <p>
-              Select regions from top menu. Search desirable regions and click on it. (See picture 1)
+            Select region from top menu. It is possible to search for a region and click on it. (See picture 1)
           </p>
           <p>
-              By double-clicking to it on orthogonal 2D cross sections or 3D volume of the brain volume. (See picture 2)
+            By double-clicking on it in orthogonal 2D cross sections or 3D volume of the brain volume. (See picture 2)
           </p>
         </div>
 
@@ -140,7 +140,7 @@
         <p>
           To conduct a single area search, right click on any parcellation area. In the context menu, select
           <mark>Search KG for ...</mark>
-          and a data browser window will be launched, fetching the dataset associated with this area.
+          and a data browser window will be launched, fetching data sets associated with this area.
         </p>
       </div>
       <!-- screenshot 1 -->
@@ -164,9 +164,9 @@
       <div class="text-container">
         <h2>Multi area search</h2>
         <p>
-          To conduct a multi area search, double click as many areas as the search scope is desired. When the region selection is completed, right click the viewer and select
+          To conduct a multi area search, double click as many areas in the search scope as necessary. When the region selection is complete, right click the viewer and select
           <mark>Search KG for ... selected regions</mark>,
-          similar to single area search, a data browser will be launched, fetching the dataset associated with all of the areas selected.
+          similar to single area search, a data browser will be launched, fetching data sets associated with all of the areas selected.
         </p>
       </div>
 
@@ -210,13 +210,16 @@
 
           <h2>Change coordinates</h2>
           <p>
-            It is two way to change coordinates.
+            There are several ways to change navigation position (coordinates of intersection of planar views):
           </p>
           <p>
-            1. Drag orthogonal 2D cross sections to desired position.
+            1. Drag orthogonal 2D cross sections with a mouse to desired position.
           </p>
           <p>
-            2. Fill coordinates in navigation field (input field located in left bottom side).
+            2. Type coordinates in navigation field (input field located at left bottom side).
+          </p>
+          <p>
+            3. Scrolling with mouse wheel while holding a ctrl key will scroll through the slices in the corresponding 2D view under the mouse cursor. Simultaneously holding shift key in addition to ctrl key will increase the speed of scrolling to 10 slices at a time instead of one.
           </p>
         </div>
         <div class="image-container">
@@ -238,9 +241,9 @@
       <div [ngClass]="{'d-flex': !isMobile}">
         <!-- text -->
         <div class="text-container">
-          <h2>Change zoom</h2>
+          <h2>Change zoom level</h2>
           <p>
-              To increase or decrease zoom of the 2D cross sections and 3D overview, user can scroll the mouse wheel.
+            Mouse scroll wheel is used to increase or decrease zoom level of 2D cross sections and 3D overview.
           </p>
         </div>
         <div class="image-container ml-1">
@@ -256,9 +259,9 @@
       <div [ngClass]="{'d-flex': !isMobile}">
         <!-- text -->
         <div class="text-container">
-          <h2>Rotation</h2>
+          <h2>Rotation (oblique slicing)</h2>
           <p>
-              Press shift + drag orthogonal 2D cross sections - to change the rotation.
+            Arbitrary orientation of planar views (oblique slicing) can be achieved by dragging orthogonal 2D cross sections while pressing the shift key.
           </p>
         </div>
         <div class="image-container ml-1">
@@ -270,31 +273,4 @@
     </div>
 
     <hr> <hr> <hr>
-
-<!--
-  <p class="description-text">
-    <strong>Hold mouse left button + Mouse move</strong> - If user clicks to mouse left button and moves cursor,
-    center of picture will change according to the moving cursor. (See the gif).
-    <br>
-    <img class="container-image" src="../../assets/pictures/move_full.gif">
-    <br>
-    <span>With that, You can see that camera area is moving into the different 2 - 2D
-       images of nehuba container and camera areal is changing for 3D image. Also, If you look at #6 panel,
-       you can see thaw while moving the image, navigation parameters are changing. </span>
-    <span class="description-text">
-      <span><strong>The mouse weel</strong> - To increase or decreas zoom of the 2D image, user can scroll the mouse weel.
-        In this case, If cursor will hover some 2D image, scroll will change size of all 2D images, but will not change 3D image zoom.
-        To change 3D image zoom, cursor should hove the panel, thare 3D image are located.</span>
-    </span>
-    <br>
-    <span class="description-text">
-      <span><strong>Shift + Hold mouse left button + Mouse move</strong> - To change the rotation in 2D image, user can press shift and mouse left buttons and move cursor.
-        Cursor should be on 2D image in which you want to change orientation. While rotation you will see that image will change for another 2D images too, also camera areal will change for 3D image.
-        To change 3D image zoom, cursor should hove the panel, thare 3D image are located.</span>
-    </span>
-    <br>
-    <span class="description-text">
-      <span><strong>Ctrl + Scroll mouse weel</strong> - move camera</span>
-    </span>
-  </p> -->
 </div>

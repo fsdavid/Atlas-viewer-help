@@ -1,8 +1,8 @@
 
 <div class="main-container">
-  <H1 >User interface</H1>
+  <H1 >Quick Start</H1>
   <div class="description-text">
-    <p>At the first page of an application, you can see the list of templates. Each item of the list contains name and description</p>
+    <p>On the first page of interactive atlas you can see the list of templates. Each item of the list contains name and description</p>
     <img class="container-image" src="../../assets/pictures/BP_Start.JPG">
     <div class="flex">
       <p>Notice the arrow button. Usually description text is collapsed into the main screen. If you want to open full description, open it using the arrow button. To choose one of the templates, just click the relevant one from the list.
@@ -23,15 +23,15 @@
       <p> <strong>1,2,3</strong> - Orthogonal 2D cross sections of the brain volume.</p>
       <p> <strong>4</strong> - The 3D overview of the brain volume.</p>
       <p> <strong>5</strong> - Logo and icons to open floating widgets such as search, layers and plugins. <span class = "link" (click)="goToRegion(Five)">click for details</span></p>
-      <p> <strong>6</strong> - Inside the square, you can see information about the coordinates and position of cursor. From here, it is available to reset position, rotation, and zoom for both 2D cross sections and 3D overview of brain volume. <span class = "link" (click)="goToRegion(Six)">click for details</span></p>
+      <p> <strong>6</strong> - Inside the square, you can see the coordinates of intersection of 2D views and position of cursor. From here, it is possible to reset position, rotation, and zoom level for both 2D cross sections and 3D overview of brain volume. <span class = "link" (click)="goToRegion(Six)">click for details</span></p>
       <p> <strong>7</strong> - Scale bar indicating current level of zoom.</p>
-      <p> <strong>8</strong> - From this part, it is possible to select templates and parcellations. Also, it is available to search, select or deselect regions of parcellation. With that, panel contains help and login buttons. <span class = "link" (click)="goToRegion(Eight)">click for details</span></p>
-      <p> <strong>9</strong> - With the clicking on the text, you can hide and show frontal octant in the 3D overview of the brain volume.</p>
+      <p> <strong>8</strong> - In this part it is possible to select templates and parcellations. Also, it provides the ability to search, select or deselect regions of parcellation. This panel contains help and login buttons as well. <span class = "link" (click)="goToRegion(Eight)">click for details</span></p>
+      <p> <strong>9</strong> - By clicking on the text, you can hide and show frontal octant in the 3D overview of the brain volume.</p>
     </div>
   </div>
 
   <div class="description-text">
-    <p>Let's deep dive into the regions 5, 6 and 8. These parts are complex. The items of each part could perform different functions, but mostly they are united in one category.</p>
+    <p>Let's deep dive into the regions 5, 6 and 8. These parts are complex. The items of each part could perform different functions, which mostly belong to one category.</p>
   </div>
 
   <div class="description-text" #Five>
@@ -39,7 +39,7 @@
   </div>
 
   <div class="description-text">
-      <p>As we mentioned, this part consists of a logo and icons. Icons are for opened or collapsed floating widgets such as layer browser, plugins, and searches. Let's see the image of these icons</p>
+      <p>As mentioned above, this part consists of a logo and icons. Icons are used to open and collapse floating widgets such as layer browser, plugins, and search. Let's look at the image of these icons</p>
   </div>
 
   <div class="description-text">
@@ -48,8 +48,7 @@
 
 
   <div class="description-text">
-      <p>There is 3 type of icons. 1. The icon for layer browser. 2. Icons for plugins.
-          3. Icons for searches. Let's pretend the floating widgets itself</p>
+      <p>There are 3 types of icons. 1. The icon for layer browser. 2. Icons for plugins. 3. Icons for search functions. And here is the image of the floating widgets themselves</p>
 
       <table class="image-table">
         <tr><td>Layer Browser</td><td>Plugin</td><td>Search</td></tr>
@@ -75,18 +74,18 @@
   </div>
 
   <div class="description-text" >
-      <p>In the first example, the part under the number 6 is not visible well. So Let's look at it better.</p>
+      <p>In the first example, the part under the number 6 is not visible well. So let's have a closer look at it.</p>
   </div>
   <div class="description-text" >
       <img class="container-image" style="max-width: 400px;" src='../../assets/pictures/navigation_tracker.gif'>
   </div>
   <div class="description-text list-item" >
-      <p>As you can see, we have 4 constant and 1 temporary line</p>
-      <p>1 - Reset: from the line you can reset position rotation and zoom of coordinates.</p>
-      <p>2 - Space: from line, you can change the measure from physical to voxel.</p>
-      <p>3 - Navigation: from here you can see and change the coordinates of orthogonal 2D cross sections of the brain volume.</p>
-      <p>4 - Mouse: you can see the coordinates of the mouse.</p>
-      <p>5 - The last temporary line is visible when the cursor is hovering some region of parcellation. Accordingly, the line content is region name.</p>
+      <p>As you can see, we have 4 constant and 1 transient line</p>
+      <p>1 - Reset: by clicking labels on this line you can reset position, rotation and zoom.</p>
+      <p>2 - Space: here you can change display units from physical space to voxel-based coordinates.</p>
+      <p>3 - Navigation: from here you can see and change the coordinates of the intersection point of orthogonal 2D cross sections of the brain volume.</p>
+      <p>4 - Mouse: coordinates of the position under mouse cursor either in physical space or in voxel units.</p>
+      <p>5 - The last line is only visible when mouse cursor hovers over some region of parcellation. Accordingly, the line content is the region name.</p>
   </div>
 
 
@@ -94,9 +93,9 @@
       <p><strong>8</strong></p>
   </div>
   <div class="description-text" >
-      <p>Let's look at part 8 better</p>
+      <p>Let's now have a closer look at part 8</p>
       <img class="container-image" src='../../assets/pictures/templates.gif'>
-      <p>You can select templates and parcellation with drop-down lists. Also, you can search and select the specific regions of parcellation.</p>
+      <p>You can select different templates and parcellation from drop-down menus. Also, you can find and select the specific regions of parcellation.</p>
   </div>
 
 

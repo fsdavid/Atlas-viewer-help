@@ -18,7 +18,7 @@ import { IsMobileService } from './resources/services/is-Movile.service';
     AppComponent,
     InterfaceComponent,
     TutorialComponent,
-    ApiComponent,
+    // ApiComponent,
     NavMenuComponent,
     HomeComponent,
   ],
