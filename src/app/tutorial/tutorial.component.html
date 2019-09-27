@@ -3,7 +3,7 @@
     <h1>
       Selection
       <small class="text-muted">
-        Select templates, parsellations and regions
+        Select templates, parcellations and regions
       </small>
     </h1>
   </div>
@@ -11,12 +11,12 @@
 <div class="container">
 
 
-    <div class="row">
-        <p style="font-style: italic">
-          Please click on image to run an animation
-        </p>
-      </div>
-      <hr>
+  <div class="row">
+    <p style="font-style: italic">
+      Please click on image to run an animation
+    </p>
+  </div>
+  <hr>
 
   <!-- Select Template -->
   <div class="row">
@@ -35,74 +35,74 @@
         </p>
       </div>
       <div class="image-container">
-        <img [src]="runGif === 's_t_1'? '../../assets/pictures/select_template_1.gif' : '../../assets/pictures/select_template_1.jpg'"
-              alt="Selectiong template Big Brain Histology."
-              (click)="runGif = 's_t_1'">
+        <img [src]="runGif === 's_t_1'? 'http://coresofts.com/image-data/select_template_1.gif' : 'http://coresofts.com/image-data/select_template_1.jpg'"
+             alt="Selectiong template Big Brain Histology."
+             (click)="runGif = 's_t_1'">
       </div>
 
       <div class="image-container ml-1">
-        <img [src]="runGif === 's_t_2'? '../../assets/pictures/select_template_2.gif' : '../../assets/pictures/select_template_2.jpg'"
-              alt="Changing template to MNI Colin 27"
-              (click)="runGif = 's_t_2'">
+        <img [src]="runGif === 's_t_2'? 'http://coresofts.com/image-data/select_template_2.gif' : 'http://coresofts.com/image-data/select_template_2.jpg'"
+             alt="Changing template to MNI Colin 27"
+             (click)="runGif = 's_t_2'">
       </div>
     </div>
   </div>
 
   <hr>
 
-  <!-- Select Parsellation -->
+  <!-- Select Parcellation -->
   <div class="row">
     <div [ngClass]="{'d-flex': !isMobile}">
 
       <!-- text -->
       <div class="text-container">
-        <h2>Selecting Parsellation</h2>
+        <h2>Selecting Parcellation</h2>
         <p>
-          You can select parsellation from top menu. Open the parcellation selection list and select desired parcellation.
+          You can select parcellation from top menu. Open the parcellation selection list and select desired parcellation.
         </p>
       </div>
 
-    <div class="image-container">
-      <img [src]="runGif === 'pa'? '../../assets/pictures/parsellation.gif' : '../../assets/pictures/parsellation.jpg'"
-            alt="Changing parselation to Fibre Bundle Atlass"
-            (click)="runGif = 'pa'">
-    </div>
+      <div class="image-container">
+        <img [src]="runGif === 'pa'? 'http://coresofts.com/image-data/parsellation.gif' : 'http://coresofts.com/image-data/parsellation.jpg'"
+             alt="Changing parselation to Fibre Bundle Atlass"
+             (click)="runGif = 'pa'">
+      </div>
     </div>
   </div>
 
   <hr>
 
   <div class="row">
-      <div [ngClass]="{'d-flex': !isMobile}">
+    <div [ngClass]="{'d-flex': !isMobile}">
 
-        <!-- text -->
-        <div class="text-container">
-          <h2>Selecting regions</h2>
-          <p>
-            Open the parsellation selection list and select the desired parcellation. You can select regions with two ways
-          </p>
-          <p>
-            Select region from top menu. It is possible to search for a region and click on it. (See picture 1)
-          </p>
-          <p>
-            By double-clicking on it in orthogonal 2D cross sections or 3D volume of the brain volume. (See picture 2)
-          </p>
-        </div>
-
-        <div class="image-container">
-            <img [src]="runGif === 's_r_1'? '../../assets/pictures/select_region_1.gif' : '../../assets/pictures/select_region_1.png'"
-                  alt="Selecting regions from top menu."
-                  (click)="runGif = 's_r_1'">
-          </div>
-
-          <div class="image-container ml-1">
-            <img [src]="runGif === 's_r_2'? '../../assets/pictures/select_region_2.gif' : '../../assets/pictures/select_region_2.png'"
-                  alt="Selecting regions by double click"
-                  (click)="runGif = 's_r_2'">
-        </div>
-
+      <!-- text -->
+      <div class="text-container">
+        <h2>Selecting regions</h2>
+        <p>
+          Open the parcellation selection list and select the desired parcellation. You can select regions with two ways
+        </p>
+        <p>
+          Select region from top menu. It is possible to search for a region and click on it. (See picture 1)
+        </p>
+        <p>
+          By double-clicking on it in orthogonal 2D cross sections or 3D volume of the brain volume. (See picture 2)
+        </p>
       </div>
+
+      <div class="image-container">
+        <img [src]="runGif === 's_r_1'? 'http://coresofts.com/image-data/select_region_1.gif' : 'http://coresofts.com/image-data/select_region_1.png'"
+             alt="Selecting regions from top menu."
+             (click)="runGif = 's_r_1'">
+      </div>
+
+      <div class="image-container ml-1">
+        <img [src]="runGif === 's_r_2'? 'http://coresofts.com/image-data/select_region_2.gif' : 'http://coresofts.com/image-data/select_region_2.png'"
+             alt="Selecting regions by double click"
+             (click)="runGif = 's_r_2'">
+      </div>
+
     </div>
+  </div>
 
 
 </div>
@@ -145,11 +145,11 @@
       </div>
       <!-- screenshot 1 -->
       <div class="image-container">
-        <img src="../../assets/searchKg/rightclick.png" alt="Screenshot of right clicking the parcellation region of Area hOc1 of JuBrain in MNI Colin 27.">
+        <img src="http://coresofts.com/image-data/rightclick.png" alt="Screenshot of right clicking the parcellation region of Area hOc1 of JuBrain in MNI Colin 27.">
       </div>
 
       <div class="image-container ml-1">
-        <img src="../../assets/searchKg/databrowser.png" alt="Screenshot of the databrowser, showing datasets fetched for Area hOc1 of JuBrain in MNI Colin 27">
+        <img src="http://coresofts.com/image-data/databrowser.png" alt="Screenshot of the databrowser, showing datasets fetched for Area hOc1 of JuBrain in MNI Colin 27">
       </div>
     </div>
   </div>
@@ -171,13 +171,13 @@
       </div>
 
       <!-- screenshot 1 -->
-    <div class="image-container">
-      <img src="../../assets/searchKg/multiregionSelect.png" alt="TODO alt text">
-    </div>
-    <!-- screenshot 2 -->
-    <div class="image-container ml-1">
-      <img src="../../assets/searchKg/multiregionQuery.png" alt="TODO alt text">
-    </div>
+      <div class="image-container">
+        <img src="http://coresofts.com/image-data/multiregionSelect.png" alt="TODO alt text">
+      </div>
+      <!-- screenshot 2 -->
+      <div class="image-container ml-1">
+        <img src="http://coresofts.com/image-data/multiregionQuery.png" alt="TODO alt text">
+      </div>
 
     </div>
   </div>
@@ -185,11 +185,11 @@
 
 <hr>  <hr>  <hr>
 <div class="jumbotron">
-    <div class="container">
-      <h1>
-        Navigation
-      </h1>
-    </div>
+  <div class="container">
+    <h1>
+      Navigation
+    </h1>
+  </div>
 </div>
 
 <div class="container">
@@ -202,75 +202,75 @@
 
 
   <div class="row">
-      <div [ngClass]="{'d-flex': !isMobile}">
-        <!-- text -->
-        <div class="text-container">
+    <div [ngClass]="{'d-flex': !isMobile}">
+      <!-- text -->
+      <div class="text-container">
 
 
 
-          <h2>Change coordinates</h2>
-          <p>
-            There are several ways to change navigation position (coordinates of intersection of planar views):
-          </p>
-          <p>
-            1. Drag orthogonal 2D cross sections with a mouse to desired position.
-          </p>
-          <p>
-            2. Type coordinates in navigation field (input field located at left bottom side).
-          </p>
-          <p>
-            3. Scrolling with mouse wheel while holding a ctrl key will scroll through the slices in the corresponding 2D view under the mouse cursor. Simultaneously holding shift key in addition to ctrl key will increase the speed of scrolling to 10 slices at a time instead of one.
-          </p>
-        </div>
-        <div class="image-container">
-          <img [src]="runGif === 'm_f_1'? '../../assets/pictures/move_full.gif' : '../../assets/pictures/move_full.jpg'"
-                alt="Selectiong template Big Brain Histology."
-                (click)="runGif = 'm_f_1'">
-        </div>
+        <h2>Change coordinates</h2>
+        <p>
+          There are several ways to change navigation position (coordinates of intersection of planar views):
+        </p>
+        <p>
+          1. Drag orthogonal 2D cross sections with a mouse to desired position.
+        </p>
+        <p>
+          2. Type coordinates in navigation field (input field located at left bottom side).
+        </p>
+        <p>
+          3. Scrolling with mouse wheel while holding a ctrl key will scroll through the slices in the corresponding 2D view under the mouse cursor. Simultaneously holding shift key in addition to ctrl key will increase the speed of scrolling to 10 slices at a time instead of one.
+        </p>
+      </div>
+      <div class="image-container">
+        <img [src]="runGif === 'm_f_1'? 'http://coresofts.com/image-data/move_full.gif' : 'http://coresofts.com/image-data/move_full.jpg'"
+             alt="Selectiong template Big Brain Histology."
+             (click)="runGif = 'm_f_1'">
+      </div>
 
-        <div class="image-container ml-1">
-          <img [src]="runGif === 'm_f_2'? '../../assets/pictures/move_full_2.gif' : '../../assets/pictures/move_full_2.png'"
-                alt="Changing template to MNI Colin 27"
-                (click)="runGif = 'm_f_2'">
-        </div>
+      <div class="image-container ml-1">
+        <img [src]="runGif === 'm_f_2'? 'http://coresofts.com/image-data/move_full_2.gif' : 'http://coresofts.com/image-data/move_full_2.png'"
+             alt="Changing template to MNI Colin 27"
+             (click)="runGif = 'm_f_2'">
       </div>
     </div>
+  </div>
 
-    <hr>
+  <hr>
   <div class="row">
-      <div [ngClass]="{'d-flex': !isMobile}">
-        <!-- text -->
-        <div class="text-container">
-          <h2>Change zoom level</h2>
-          <p>
-            Mouse scroll wheel is used to increase or decrease zoom level of 2D cross sections and 3D overview.
-          </p>
-        </div>
-        <div class="image-container ml-1">
-            <img [src]="runGif === 'zo'? '../../assets/pictures/zoom.gif' : '../../assets/pictures/zoom.png'"
-                  alt="Changing template to MNI Colin 27"
-                  (click)="runGif = 'zo'">
-        </div>
+    <div [ngClass]="{'d-flex': !isMobile}">
+      <!-- text -->
+      <div class="text-container">
+        <h2>Change zoom level</h2>
+        <p>
+          Mouse scroll wheel is used to increase or decrease zoom level of 2D cross sections and 3D overview.
+        </p>
+      </div>
+      <div class="image-container ml-1">
+        <img [src]="runGif === 'zo'? 'http://coresofts.com/image-data/zoom.gif' : 'http://coresofts.com/image-data/zoom.png'"
+             alt="Changing template to MNI Colin 27"
+             (click)="runGif = 'zo'">
       </div>
     </div>
+  </div>
 
-    <hr>
+  <hr>
   <div class="row">
-      <div [ngClass]="{'d-flex': !isMobile}">
-        <!-- text -->
-        <div class="text-container">
-          <h2>Rotation (oblique slicing)</h2>
-          <p>
-            Arbitrary orientation of planar views (oblique slicing) can be achieved by dragging orthogonal 2D cross sections while pressing the shift key.
-          </p>
-        </div>
-        <div class="image-container ml-1">
-            <img [src]="runGif === 'ro'? '../../assets/pictures/rotate.gif' : '../../assets/pictures/rotate.png'"
-                  alt="Changing template to MNI Colin 27"
-                  (click)="runGif = 'ro'">
-        </div>
+    <div [ngClass]="{'d-flex': !isMobile}">
+      <!-- text -->
+      <div class="text-container">
+        <h2>Rotation (oblique slicing)</h2>
+        <p>
+          Arbitrary orientation of planar views (oblique slicing) can be achieved by dragging orthogonal 2D cross sections while pressing the shift key.
+        </p>
+      </div>
+      <div class="image-container ml-1">
+        <img [src]="runGif === 'ro'? 'http://coresofts.com/image-data/rotate.gif' : 'http://coresofts.com/image-data/rotate.png'"
+             alt="Changing template to MNI Colin 27"
+             (click)="runGif = 'ro'">
       </div>
     </div>
+  </div>
 
-    <hr> <hr> <hr>
+  <hr> <hr> <hr>
 </div>
